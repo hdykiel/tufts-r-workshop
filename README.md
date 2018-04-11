@@ -5,3 +5,10 @@ Example code and links to resources for R workshop held at Tufts University on A
 
 ## Decks
 https://github.com/rstudio-education/master-the-tidyverse-instructors
+
+## Agenda
+
+- Data wrangling with Tidyverse
+- Visualization
+- R Markdown
+- Shiny
