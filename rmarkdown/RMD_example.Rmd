@@ -1,0 +1,65 @@
+---
+title: "R Markdown Example"
+output:
+  html_document:
+    df_print: paged
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+## What is Markdown?
+
+"Markdown is a lightweight markup language with plain text formatting syntax. It is **designed so that it can be converted to HTML and many other formats** using a tool by the same name.[8] Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. As the initial description of Markdown contained ambiguities and unanswered questions, many implementations and extensions of Markdown appeared over the years to answer these issues.... the goal of enabling people "to write using an easy-to-read, easy-to-write plain text format, and optionally convert it to structurally valid XHTML (or HTML)... The key design goal is **readability**..." [wikipedia](https://en.wikipedia.org/wiki/Markdown)
+
+## Useful Syntax
+
+*italics*  
+**bold**  
+superscript^2^  
+~~strikethrough~~  
+[hyperlink](url)  
+# header 1  
+## header 2  
+### header 3  
+#### ect  
+inline equation: $A = \pi*r^{2}$  
+image: ![Image Caption](tufts.jpeg)  
+
+> block quote  
+Insert deep quote here
+
+* unordered list
+* item 2
+    + sub-item 1
+    + sub-item 2
+
+1. ordered list
+2. item 2
+    + sub-item 1
+    + sub-item 2 
+
+## What's the YAML header?  
+"What It Is: YAML is a human friendly data serialization standard for all programming languages." 
+
+Write a YAML header that explains what type of
+document to build from your R Markdown file.
+
+
+## Why use rmarkdowmn?  
+Use RMarkdown for all your R project for readibility and reproducibility. A lot of packages leverage markdown syntax to create things like interactive dashboards, web applications, websites, and more.
+
+
+
+
