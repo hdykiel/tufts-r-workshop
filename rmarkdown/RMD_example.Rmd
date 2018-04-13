@@ -23,6 +23,13 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 
 "Markdown is a lightweight markup language with plain text formatting syntax. It is **designed so that it can be converted to HTML and many other formats** using a tool by the same name.[8] Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. As the initial description of Markdown contained ambiguities and unanswered questions, many implementations and extensions of Markdown appeared over the years to answer these issues.... the goal of enabling people "to write using an easy-to-read, easy-to-write plain text format, and optionally convert it to structurally valid XHTML (or HTML)... The key design goal is **readability**..." [wikipedia](https://en.wikipedia.org/wiki/Markdown)
 
+## R Markdown Basics  
+> RMD files contain 3 important types of content:  
+1. An (optional) YAML header surrounded by --s.  
+2. Chunks of code surrounded by ```.  
+3. Text mixed with simple text formatting  
+(R For Data Science, 424)
+
 ## Useful Syntax
 
 *italics*  

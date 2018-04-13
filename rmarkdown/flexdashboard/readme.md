@@ -1,0 +1,1 @@
+Let's follow [RStudio's tutorial](https://rmarkdown.rstudio.com/flexdashboard/index.html) to build a flexdashboard.
