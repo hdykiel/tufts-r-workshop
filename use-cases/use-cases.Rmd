@@ -1,0 +1,42 @@
+---
+title: "R Use Cases"
+output: html_document
+---
+
+**Business use case: predicting product needs**  
+* data ingestion  
+* data cleaning  
+* modeling  
+* readable report  
+* packages used: rmarkdown, caret  
+    
+**Exploratory Data Analysis**  
+[Cost of data science masters by country]("https://rpubs.com/hdykiel/220819")  
+packages used: rmarkdown, plotly
+
+
+[Map of schools offering data science programs]("https://rpubs.com/hdykiel/data-science-programs") 
+packages used: rmarkdown, flexdashboard, leaflet
+
+
+[A more detailed example of EDA with R]("https://www.kaggle.com/notaapple/detailed-exploratory-data-analysis-using-r")
+
+**Websites**  
+http://www.salsa-moves.org/  
+https://bookdown.org/  
+
+**Books**
+http://r4ds.had.co.nz/  
+https://bookdown.org/yihui/bookdown/
+
+**Shiny Applications**  
+https://gallery.shinyapps.io/TSupplyDemand/  
+https://shiny.rstudio.com/gallery/google-charts.html  
+https://shiny.rstudio.com/gallery/genome-browser.html  
+https://gallery.shinyapps.io/3D_Mapping/
+
+**Flexdashboards**  
+https://beta.rstudioconnect.com/jjallaire/htmlwidgets-highcharter/htmlwidgets-highcharter.html
+https://beta.rstudioconnect.com/jjallaire/htmlwidgets-showcase-storyboard/htmlwidgets-showcase-storyboard.html  
+
+
