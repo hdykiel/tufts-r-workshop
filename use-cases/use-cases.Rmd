@@ -15,7 +15,7 @@ output: html_document
 packages used: rmarkdown, plotly
 
 
-[Map of schools offering data science programs]("https://rpubs.com/hdykiel/data-science-programs") 
+[Map of schools offering data science programs]("https://rpubs.com/hdykiel/data-science-programs")   
 packages used: rmarkdown, flexdashboard, leaflet
 
 
@@ -25,7 +25,7 @@ packages used: rmarkdown, flexdashboard, leaflet
 http://www.salsa-moves.org/  
 https://bookdown.org/  
 
-**Books**
+**Books**  
 http://r4ds.had.co.nz/  
 https://bookdown.org/yihui/bookdown/
 
@@ -39,4 +39,6 @@ https://gallery.shinyapps.io/3D_Mapping/
 https://beta.rstudioconnect.com/jjallaire/htmlwidgets-highcharter/htmlwidgets-highcharter.html
 https://beta.rstudioconnect.com/jjallaire/htmlwidgets-showcase-storyboard/htmlwidgets-showcase-storyboard.html  
 
+**Business use case: market research**  
 
+**Web Scraping**  
