@@ -11,12 +11,12 @@ You can clone this project (AKA download all the files) by selecting File > New 
 
 Alternatively, do the exact steps above but fork my github repo first to your own github account. This will give you the option to contribute to this project, if you wish. Rather than entering my github repo URL, you will enter your own.
 
-## Agenda
-
-- Data wrangling with Tidyverse
+## Agenda  
+- R & RStudio  
+- Use cases  
 - Visualization
+- Data wrangling with Tidyverse
 - R Markdown
 - Shiny
 
-# test
-What happens if I add my own text?
+

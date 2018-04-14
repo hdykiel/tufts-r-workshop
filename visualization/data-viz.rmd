@@ -1,0 +1,75 @@
+---
+title: "Visualization in R"
+output:
+  html_document:
+    df_print: paged
+---
+
+## My favorite data viz packages  
+
+**ggplot2**  
+"Powerful, flexible and well-thought-out dataviz package following 'grammar of graphics' syntax to create static graphics, but be prepared for a steep learning curve. CRAN.^[1](https://www.computerworld.com/article/2921176/business-intelligence/great-r-packages-for-data-import-wrangling-visualization.html)^" - I'm not sure I agree with the last statement, I've found ggplot2 to be very intuitive.
+
+**plotly**  
+"R interface to the Plotly JavaScript library that was open-sourced in late 2015. Basic graphs have a distinctive look which may not be for everyone, but it's full-featured, relatively easy to learn (especially if you know ggplot2) and includes a ggplotly() function to turn graphs created with ggplot2 interactive. CRAN."^[1](https://www.computerworld.com/article/2921176/business-intelligence/great-r-packages-for-data-import-wrangling-visualization.html)^
+
+***  
+
+Let's start by playing around with `ggplot2`. These examples were borrowed from Hadley's and Garrett's book [R for Data Science]("http://r4ds.had.co.nz/")
+
+```{r}
+library(tidyverse) # load tidyverse packacges which includes ggplot2
+head(mpg) # print first 6 rows
+
+ggplot(data = mpg) + # specifies dataframe used for visualization
+  geom_point(mapping = aes(x = displ, y = hwy)) # adds first layer, in this case points, and specifies x variable, and y variable 
+
+
+```
+
+A useful graphing template to remember:   
+`ggplot(data = <DATA>) +
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))`
+  
+```{r}
+# Next, we'll map an aesthetic to another variable. In this case, we use the aesthetic color so the graph can tell us the class of the vehicle in addition to the displacement and mpg.
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+
+
+# Other examples of aesthetics we can use are size and alpha (transparancy)
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, color = class, size = displ))
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, color = class, size = displ, alpha = year))
+
+# Let's try adding shape too to show what type of transmission 
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, color = class, size = displ, alpha = year, shape = trans))
+
+# And how about a title?
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, color = class, size = displ, alpha = year)) +
+  labs(
+    title = "MPG vs. Displacement",
+    caption = "Data from fueleconomy.gov",
+    x = "Engine displacement",
+    y = "Highway fuel economy") 
+```
+  
+  **Exercises**  
+1. What happens if you map an aesthetic to something other than a variable name, like `aes(color = displ < 5)`?
+
+```{r}
+# ggplot(data = mpg) +
+#   geom_point(mapping = aes(x = displ, y = hwy, color = displ <5))
+```
+
+2. Try create a graph with the `geom_smooth()` function
+```{r}
+# ggplot(data = mpg) +
+#   geom_smooth(mapping = aes(x = displ, y = hwy))
+```
+
+3. Can you create a graph with both a layer of points and a smooth line?
