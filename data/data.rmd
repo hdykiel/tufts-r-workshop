@@ -1,0 +1,21 @@
+---
+title: "Sample Data"
+output: html_notebook
+---
+
+
+```{r}
+
+
+# base r
+head(mtcars)
+head(iris)
+
+# tidyverse
+head(mpg)
+head(nycflights13::flights)
+
+# happiness data from kaggle
+happy <- read.csv(file = "happiness-index/2017.csv")
+```
+

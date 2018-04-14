@@ -73,3 +73,17 @@ ggplot(data = mpg) +
 ```
 
 3. Can you create a graph with both a layer of points and a smooth line?
+
+
+**Correlation matrix example** 
+http://www.sthda.com/english/wiki/visualize-correlation-matrix-using-correlogram
+```{r}
+
+library(corrplot)
+## corrplot 0.84 loaded
+M <- cor(mtcars)
+corrplot(M, method = "circle")
+
+
+```
+

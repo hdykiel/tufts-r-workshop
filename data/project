@@ -1,0 +1,5 @@
+Happiness Report
+================
+
+
+Exercise: use the happiness data in "/data/happiness-index" to practice the things we've learned. Ask a question or form a hypothesis. Perform some data exploratory analysis. Transform the data as needed. And finally, think about how to communicate your result by creating an RMarkdown report, Flexdashboard, or Shiny application.

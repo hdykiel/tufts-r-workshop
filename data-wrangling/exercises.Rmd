@@ -1,0 +1,18 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+1. install and load the `nycflights13` package which contains all 336,776 flights which departed from New York City in 2013.
+
+2. Find all flights that had an arrival delay of 2 or more hours
+
+3. Find all flights which were operated by United, American, or Delta
+
+4. Another useful **dplyr** filtering helper is `between()`. Can you use it to find all flights which departed between midnight and 6 am?
+
+5. Calculate the average delay time for each airline.
+
+
+
+
