@@ -1,0 +1,48 @@
+---
+title: "Happiness By Region"
+params:
+  region: "latin america"
+  minimum: 100
+output:
+  html_document:
+    df_print: paged
+---
+
+# World happiness  
+Regions:  ”eurasia”,”africa”,”latin america”,”uk”,”oceania”,”asia"  
+Article on [rworldmap](http://colorado.rstudio.com/rstudio/s/ce6086fe78a415709b3b4/files/R/x86_64-pc-linux-gnu-library/3.4/rworldmap/doc/rworldmap.pdf) package.
+
+```{r, message = FALSE}
+# load data
+library(readr)
+df <- read_csv("../../data/happiness-index/2017.csv")
+```
+
+```{r, message=FALSE, warning=FALSE}
+library(rworldmap)
+
+# join happiness date to map
+map <- joinCountryData2Map( df
+,joinCode = "NAME"
+,nameJoinColumn = "Country"
+,verbose = TRUE)
+
+# pick color scheme
+
+colourPalette <- RColorBrewer::brewer.pal(7,'YlGn')
+                                          
+# plot map
+par(mai=c(0,0,0.2,0),xaxs="i",yaxs="i")
+map.params <- mapCountryData( map,
+                  nameColumnToPlot="Happiness.Score",
+                  #zoom
+                  mapRegion = params$region,
+                  oceanCol="lightblue",
+                  missingCountryCol="white",
+                  colourPalette = colourPalette,
+                  addLegend=FALSE)
+do.call( addMapLegend, c(map.params, legendWidth=0.5, legendMar = 2))
+```
+
+
+

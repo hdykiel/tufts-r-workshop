@@ -62,6 +62,19 @@ ggplot(data = mpg) +
     x = "Engine displacement",
     y = "Highway fuel economy") 
 
+# faceting
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() +
+  facet_wrap(~class)
+
+
+# violin plot
+ggplot(mpg, aes(drv, hwy)) +
+  geom_violin()
+
+# Frequency polygon
+ggplot(mpg, aes(hwy)) +
+  geom_freqpoly()
 
 ```
   
@@ -69,14 +82,16 @@ ggplot(data = mpg) +
 1. What happens if you map an aesthetic to something other than a variable name, like `aes(color = displ < 5)`?
 
 ```{r}
-# ggplot(data = mpg) +
-#   geom_point(mapping = aes(x = displ, y = hwy, color = displ <5))
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = displ, y = hwy, color = displ <5))
 ```
 
 2. Try create a graph with the `geom_smooth()` function
 ```{r}
-# ggplot(data = mpg) +
-#   geom_smooth(mapping = aes(x = displ, y = hwy))
+ggplot(data = mpg, mapping = aes(x = displ ,y = hwy )) +
+  geom_smooth( color = "red") +
+  geom_point(mapping = aes(x=cyl, y= cty))
+
 ```
 
 3. Can you create a graph with both a layer of points and a smooth line?
