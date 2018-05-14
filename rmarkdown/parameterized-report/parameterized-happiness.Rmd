@@ -1,25 +1,32 @@
 ---
-title: "Happiness By Region"
+title: "World Happiness Report"
 params:
-  region: "latin america"
-  minimum: 100
+  region:
+    label: "Region:"
+    value: "latin america"
+    input: select
+    choices: ["lating america", "africa", "uk", "oceania", "asia"]
+  top.countries: 10
 output:
   html_document:
     df_print: paged
 ---
 
-# World happiness  
+## Happiness Score by Region  
 Regions:  ”eurasia”,”africa”,”latin america”,”uk”,”oceania”,”asia"  
 Article on [rworldmap](http://colorado.rstudio.com/rstudio/s/ce6086fe78a415709b3b4/files/R/x86_64-pc-linux-gnu-library/3.4/rworldmap/doc/rworldmap.pdf) package.
 
-```{r, message = FALSE}
+```{r, message = FALSE, include = FALSE}
+# environment setup
+library(tidyverse)
+library(rworldmap)
+library(rlang)
+
 # load data
-library(readr)
-df <- read_csv("../../data/happiness-index/2017.csv")
+df <- read_csv("data/2017.csv")
 ```
 
-```{r, message=FALSE, warning=FALSE}
-library(rworldmap)
+```{r, message=FALSE, warning=FALSE, include=FALSE}
 
 # join happiness date to map
 map <- joinCountryData2Map( df
@@ -27,6 +34,9 @@ map <- joinCountryData2Map( df
 ,nameJoinColumn = "Country"
 ,verbose = TRUE)
 
+```
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
 # pick color scheme
 
 colourPalette <- RColorBrewer::brewer.pal(7,'YlGn')
@@ -45,4 +55,14 @@ do.call( addMapLegend, c(map.params, legendWidth=0.5, legendMar = 2))
 ```
 
 
+**Is happiness associated with a high GDP?**
+
+```{r, message=FALSE, warning=FALSE}
+# filter data
+df.sub <- df %>%
+  top_n(-params$top.countries, wt = Happiness.Rank)
+
+ggplot(df.sub, aes(Economy..GDP.per.Capita., Happiness.Score, label = Country))+
+  geom_label()
+```
 
