@@ -1,0 +1,12 @@
+name: happiness_report
+title: Happiness Report
+username: hadrien
+account: hadrien
+server: colorado.rstudio.com
+hostUrl: http://colorado.rstudio.com/rsc/__api__
+appId: 1081
+bundleId: 6951
+url: http://colorado.rstudio.com:80/rsc/content/1081/
+when: 1526300808.20447
+asMultiple: FALSE
+asStatic: FALSE

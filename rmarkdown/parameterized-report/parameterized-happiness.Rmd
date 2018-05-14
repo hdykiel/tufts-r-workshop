@@ -6,7 +6,7 @@ params:
     value: "latin america"
     input: select
     choices: ["lating america", "africa", "uk", "oceania", "asia"]
-  top.countries: 10
+  top.countries: 100
 output:
   html_document:
     df_print: paged
@@ -54,7 +54,7 @@ map.params <- mapCountryData( map,
 do.call( addMapLegend, c(map.params, legendWidth=0.5, legendMar = 2))
 ```
 
-
+## Happiness by country   
 **Is happiness associated with a high GDP?**
 
 ```{r, message=FALSE, warning=FALSE}
@@ -62,7 +62,8 @@ do.call( addMapLegend, c(map.params, legendWidth=0.5, legendMar = 2))
 df.sub <- df %>%
   top_n(-params$top.countries, wt = Happiness.Rank)
 
-ggplot(df.sub, aes(Economy..GDP.per.Capita., Happiness.Score, label = Country))+
-  geom_label()
+ggplot(df.sub, aes(Economy..GDP.per.Capita., Happiness.Score, label = Country)) +
+  geom_label() +
+  labs(title = paste("Top", params$top.countries, "happiest countries"))
 ```
 
