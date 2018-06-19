@@ -44,6 +44,9 @@ superscript^2^
 inline equation: $A = \pi*r^{2}$  
 image: ![Image Caption](tufts.jpeg)  
 
+Video  
+<iframe width="560" height="315" src="https://youtu.be/atiYXm7JZv0" frameborder="0" allowfullscreen></iframe>
+
 > block quote  
 Insert deep quote here
 

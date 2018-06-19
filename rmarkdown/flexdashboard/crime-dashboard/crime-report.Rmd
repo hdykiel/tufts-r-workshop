@@ -1,0 +1,45 @@
+---
+title: "Flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns # defaul layout
+    vertical_layout: fill
+---
+
+# Page 1
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(readr)
+
+# load data
+df <- read_csv("Crime_Reports.csv")
+
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
+
+# Page 2

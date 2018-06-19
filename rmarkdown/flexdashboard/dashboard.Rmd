@@ -1,13 +1,20 @@
 ---
-title: "Untitled"
+title: "Flexdashboard"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: columns # defaul layout
     vertical_layout: fill
 ---
 
+# Page 1
+
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(readr)
+
+# load data
+df <- read_csv()
+
 ```
 
 Column {data-width=650}
@@ -35,3 +42,4 @@ Column {data-width=350}
 ```
 
 
+# Page 2
