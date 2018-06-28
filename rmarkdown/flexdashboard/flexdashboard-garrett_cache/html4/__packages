@@ -1,0 +1,7 @@
+base
+dplyr
+highcharter
+viridisLite
+ggplot2
+bindrcpp
+DT

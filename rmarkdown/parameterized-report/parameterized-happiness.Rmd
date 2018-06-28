@@ -3,11 +3,12 @@ title: "World Happiness Report"
 params:
   region:
     label: "Region:"
-    value: "latin america"
     input: select
-    choices: ["lating america", "africa", "uk", "oceania", "asia"]
+    value: "america"
+    choices: ["latin america", "africa", "uk", "oceania", "asia"]
   top.countries: 100
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
@@ -57,7 +58,7 @@ do.call( addMapLegend, c(map.params, legendWidth=0.5, legendMar = 2))
 ## Happiness by country   
 **Is happiness associated with a high GDP?**
 
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
 # filter data
 df.sub <- df %>%
   top_n(-params$top.countries, wt = Happiness.Rank)
@@ -66,4 +67,7 @@ ggplot(df.sub, aes(Economy..GDP.per.Capita., Happiness.Score, label = Country)) 
   geom_label() +
   labs(title = paste("Top", params$top.countries, "happiest countries"))
 ```
+
+
+
 

@@ -1,0 +1,12 @@
+name: python-example-jmb
+title: python-example-jmb
+username: hadrien
+account: hadrien
+server: colorado.rstudio.com
+hostUrl: http://colorado.rstudio.com/rsc/__api__
+appId: 1223
+bundleId: 10399
+url: http://colorado.rstudio.com:80/rsc/content/1223/
+when: 1530021496.93689
+asMultiple: FALSE
+asStatic: FALSE

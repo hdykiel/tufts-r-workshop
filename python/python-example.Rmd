@@ -1,0 +1,51 @@
+---
+title: "Using RStudio as a multilingual IDE"
+output: html_notebook
+---
+
+```{r setup}
+library(reticulate)
+```
+
+
+In addition to R, RStudio can be used to execute other code such as SQL, Bash, and Python.
+
+```{r r-data}
+# load data
+df <- mtcars # save to R object
+```
+
+Access R objects from python.
+```{python py-data}
+import pandas
+cars = r.df
+cars = cars[cars['mpg'] <= 20]
+print(cars.head())
+```
+
+Persistent python objects across code chunks.
+```{python py-filter}
+filtered_cars = cars[cars['cyl'] != 4]
+print(filtered_cars.head())
+```
+
+
+Plotting in python
+```{python py-plot}
+import matplotlib.pyplot as plt
+
+filtered_cars.plot.scatter(x='disp', y = 'hp')
+```
+
+Plotting in R
+```{r r-plot}
+library(ggplot2)
+py_data <- py$filtered_cars
+ggplot(py_data, aes(x = disp, y = hp)) +
+  geom_point()
+```
+
+```{r}
+py$cars
+```
+

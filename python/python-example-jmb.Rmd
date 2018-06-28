@@ -1,0 +1,49 @@
+---
+title: "Using RStudio as a multi lingual IDE"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup}
+library(reticulate)
+# Use Python3
+use_python("/usr/bin/python3")
+```
+
+In addition to R, RStudio can be used to execute other code such as SQL, Bash, and Python.
+
+```{r r-data}
+# load data
+df <- mtcars # save to R object
+```
+
+Access R objects from python.
+```{python py-data}
+import pandas
+cars = r.df
+print(cars.head())
+```
+
+Persistent python objects across code chunks.
+```{python py-filter}
+filtered_cars = cars[cars['cyl'] != 4][['mpg','cyl','disp','hp']]
+print(filtered_cars.head())
+```
+
+
+Plotting in python
+```{python py-plot}
+import matplotlib.pyplot as plt
+
+filtered_cars.plot.scatter(x='disp', y = 'hp')
+plt.show()
+```
+
+Plotting in R
+```{r r-plot}
+library(ggplot2)
+ggplot(py$filtered_cars, aes(x = disp, y = hp)) +
+  geom_point()
+```
+

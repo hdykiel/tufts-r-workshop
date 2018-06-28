@@ -1,0 +1,64 @@
+---
+title: "Flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns # defaul layout
+    vertical_layout: fill
+---
+
+# Page 1
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(readr)
+library(leaflet)
+```
+
+
+```{r load-data}
+# load data
+file.info("World capitals - Sheet1.csv") # check file size
+df <- read_csv("World capitals - Sheet1.csv")
+
+head(df)
+
+```
+
+
+```{r data-wrangle}
+
+```
+
+```{r leaflet-map}
+
+
+
+```
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+library(leaflet)
+leaflet() %>% # creates container
+  addTiles() # adds default tile from open street maps
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
+
+# Page 2
