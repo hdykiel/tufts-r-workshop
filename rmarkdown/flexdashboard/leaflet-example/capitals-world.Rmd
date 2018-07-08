@@ -1,9 +1,10 @@
 ---
-title: "Flexdashboard"
+title: "World Capitals"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns # defaul layout
+    orientation: columns # default layout
     vertical_layout: fill
+    runtime: shiny
 ---
 
 # Page 1
@@ -11,11 +12,13 @@ output:
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(readr)
+library(dplyr)
 library(leaflet)
+library(shiny)
 ```
 
 
-```{r load-data}
+```{r load-data, include=FALSE}
 # load data
 file.info("World capitals - Sheet1.csv") # check file size
 df <- read_csv("World capitals - Sheet1.csv")
@@ -25,24 +28,51 @@ head(df)
 ```
 
 
-```{r data-wrangle}
+```{r data-wrangle, include=FALSE}
+# * _at affects variables selected with a character vector or vars()
+df <- df %>%
+        mutate_at(vars(Latitude, Longitude),
+            funs(as.numeric(gsub("[NE]$", "", gsub("^(.*)[WS]$", "-\\1", .)))))
 
 ```
 
-```{r leaflet-map}
+## Sidebar {.sidebar}
 
-
+```{r input-boxes}
+selectInput(inputId = "Country", label = "Country", choices = df$Country, multiple = TRUE, selected = df$Country[1])
 
 ```
+
 Column {data-width=650}
 -----------------------------------------------------------------------
 
 ### Chart A
 
-```{r}
+```{r leaflet-map}
+# create custom marker
+# Define map markers
+icons <- makeAwesomeIcon(
+           icon= 'star-empty', 
+           markerColor = 'green',
+           iconColor = 'white', 
+           library = 'glyphicon'
+          )
+
 library(leaflet)
-leaflet() %>% # creates container
-  addTiles() # adds default tile from open street maps
+renderLeaflet({
+  # filter based on input
+  selectedData <- df %>% filter(Country %in% input$Country)
+  
+  # print map
+  leaflet(selectedData) %>% # creates container
+  addTiles() %>% # adds default tile from open street maps
+  addAwesomeMarkers(lng = ~Longitude, lat = ~Latitude, popup = paste(selectedData$Country,", ", selectedData$Capital, sep = ""), icon = icons)
+})
+
+
+
+
+
 ```
 
 Column {data-width=350}

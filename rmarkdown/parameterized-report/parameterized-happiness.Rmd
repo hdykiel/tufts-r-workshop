@@ -69,5 +69,12 @@ ggplot(df.sub, aes(Economy..GDP.per.Capita., Happiness.Score, label = Country)) 
 ```
 
 
+```{r e-mail, include=FALSE}
+# define e-mail subject header
+happiest.country <- df$Country[df$Happiness.Rank == 1]
+(email.subject <- paste("The happiest country in the world is", happiest.country ))
+rmarkdown::output_metadata$set(rsc_email_subject = email.subject)
+
+```
 
 
