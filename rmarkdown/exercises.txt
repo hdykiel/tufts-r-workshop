@@ -1,0 +1,40 @@
+# 8/8/2018 RMD Workshop
+
+Exercise 1: practice using RMD
+------------------------------
+* Create your own RMD report. Optional guidelines: 
+    * add some commentary about the competition, such as the business problem your analysis or application will solve and the value it will create for the business. 
+    * Add some formatting to your text: bold, italics, and a hyperlink. 
+    * Add an R code chunk with some R code in it. Set code chunk option to print results but not the code.
+    * Render your RMD doc locally.
+    * Bonus challenge: create a table of contents (see section 3.1.1), enable the code-folding option (3.1.7), add a parameter
+    
+    
+Useful resources:
+https://bookdown.org/yihui/rmarkdown/
+https://rmarkdown.rstudio.com/lesson-1.html
+    
+ Exercise 2: deploy RMD to RSC
+---------------------------------
+* Deploy RMD doc to RSC
+* Edit the e-mail metadata property to create a custom e-mail subject header
+* Add logic to suppress e-mail notification based on report criteria
+* add link to downloadable data
+* add attachments
+
+Useful resources:
+RSC user guide: http://docs.rstudio.com/connect/user/r-markdown.html (see section 5.3 for output metadata)
+
+
+Exercise 3: build a flexdashboard
+----------------------------------
+* Transform your RMD document into an html flexdashboard
+* Add a visualization to your dashboard
+* Create tabs with {.tabset}
+* Bonus: create a "storyboard" flexdashboard, add runtime:shiny
+
+Useful resources:
+RMD book (chapter 5): https://bookdown.org/yihui/rmarkdown/dashboards.html
+
+
+    

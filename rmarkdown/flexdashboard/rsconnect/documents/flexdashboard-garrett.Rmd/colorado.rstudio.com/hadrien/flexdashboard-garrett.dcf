@@ -1,0 +1,12 @@
+name: flexdashboard-garrett
+title: flexdashboard-garrett
+username: hadrien
+account: hadrien
+server: colorado.rstudio.com
+hostUrl: http://colorado.rstudio.com/rsc/__api__
+appId: 1280
+bundleId: 11643
+url: http://colorado.rstudio.com:80/rsc/content/1280/
+when: 1531319738.19698
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,11 +1,7 @@
 ---
 title: "World Happiness Report"
 params:
-  region:
-    label: "Region:"
-    input: select
-    value: "america"
-    choices: ["latin america", "africa", "uk", "oceania", "asia"]
+  region: "america"
   top.countries: 100
 output:
   pdf_document: default

@@ -1,13 +1,28 @@
 ---
 title: "An Overview of rmarkdown"
 author: "Hadrien Dykiel"
-date: "July 2nd, 2018"
+date: "August 8th, 2018"
 output:
   slidy_presentation: default
-  beamer_presentation: default
-  powerpoint_presentation: default
   ioslides_presentation: default
 ---
+
+
+# Goals for today
+
+* Understand what the rmarkdown package is and what you can build with it
+* Learn the basics of a RMD document so you can use it to do analysis and/or build reproducible reports
+* Learn how you can use RSC in conjunction with RMD reports to communicate your findings and reach more people
+* Learn how to create a dynamic dashboard with RMD with flexdashboard
+
+
+# Agenda 
+
+* Intro 
+* Basics of RMD
+* Deploying RMD to RStudio Connect 
+* Building a flexdashboard 
+* Bonus round and/or practice session 
 
 # How it works
  
@@ -30,9 +45,10 @@ Repdroducible analyses $\Longrightarrow$ increased efficiency, reduced error rat
 
 # What can I build with the rmarkdown package? 
 
-- Static reports in various formarts including [html](http://colorado.rstudio.com/rsc/content/1129/report.html"), [PDF](http://colorado.rstudio.com/rsc/content/1081/parameterized-happiness.pdf), Word, and Powerpoint. 
-- Websites. The [rmarkdown website](https://rmarkdown.rstudio.com/) itself is built using rmarkdown
-- [Presentations](http://svmiller.com/rmarkdown-example.pdf)
-- [Interactive dashboards](https://gallery.shinyapps.io/cran-gauge/)
+- Static reports in various formarts including [html](http://colorado.rstudio.com/rsc/content/1129/report.html){target="_blank"}, [PDF](http://colorado.rstudio.com/rsc/content/1081/parameterized-happiness.pdf){target="_blank"}, Word, and Powerpoint. 
+- Websites. The [rmarkdown website](https://rmarkdown.rstudio.com/){target="_blank"} itself is built using rmarkdown
+- [Presentations](http://svmiller.com/rmarkdown-example.pdf){target="_blank"}
+- [Interactive dashboards](https://gallery.shinyapps.io/cran-gauge/){target="_blank"}
+- [See the R Markdown gallery](https://rmarkdown.rstudio.com/gallery.html){target="_blank"}
 
 

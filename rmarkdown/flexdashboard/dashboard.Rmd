@@ -2,22 +2,23 @@
 title: "Flexdashboard"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns # defaul layout
+    orientation: columns # default layout
     vertical_layout: fill
 ---
 
 # Page 1
 
+
+# Page 2
+
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(readr)
 
-# load data
-df <- read_csv()
 
 ```
 
-Column {data-width=650}
+Column {data-width=650, .tabset}
 -----------------------------------------------------------------------
 
 ### Chart A
@@ -26,6 +27,7 @@ Column {data-width=650}
 
 ```
 
+### Chart B
 Column {data-width=350}
 -----------------------------------------------------------------------
 
@@ -42,4 +44,6 @@ Column {data-width=350}
 ```
 
 
+
 # Page 2
+

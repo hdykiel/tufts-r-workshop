@@ -1,0 +1,37 @@
+---
+title: "Storyboard Commentary"
+output:
+  flexdashboard::flex_dashboard:
+    storyboard: yes
+  flexdashboard: default
+---
+
+# Page 1
+
+### A nice scatterplot here
+
+```{r}
+plot(cars, pch = 20)
+grid()
+```
+
+---
+
+"Besides the column and row-based layouts, you may present a series of visualizations and related commentary through the “storyboard” layout. To enable this layout, you use the option storyboard. Below is an example, and Figure 5.3 shows the output, in which you can see left/right navigation buttons at the top to help you go through all visualizations and associated commentaries one by one"[1](https://bookdown.org/yihui/rmarkdown/layout.html#story-boards)
+
+### A beautiful histogram on this board
+
+```{r}
+hist(faithful$eruptions, col = 'gray', border = 'white', main = '')
+```
+
+---
+
+Some commentary about Frame 2.
+
+### Another example storyboard flexdashboard
+
+---
+
+[Dashboard with storyboard](https://beta.rstudioconnect.com/jjallaire/htmlwidgets-showcase-storyboard/htmlwidgets-showcase-storyboard.html)
+

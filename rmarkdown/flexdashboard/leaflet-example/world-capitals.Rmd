@@ -7,7 +7,7 @@ output:
 runtime: shiny
 ---
 
-# World Stats
+# World Stats 
 
 ```{r setup, include=FALSE}
 library(shiny)
@@ -40,14 +40,14 @@ df <- df %>%
 
 ```
 
-## Sidebar {.sidebar}
+## Sidebar {.sidebar} 
 
 ```{r input-boxes}
 selectInput(inputId = "Country", label = "Country", choices = df$Country, multiple = TRUE, selected = df$Country[1:2])
 
 ```
 
-Column {data-width=650}
+Column {data-width=650} 
 -----------------------------------------------------------------------
 
 ### Leaflet Map 
@@ -80,7 +80,7 @@ renderLeaflet({
 
 ```
 
-## Column {data-width=350}
+## Column {data-width=350} 
 
 
 ### Gauges 
@@ -112,7 +112,7 @@ corrplot(M, method="circle", tl.cex = 0.6)
 ```
 
 
-# USA Population {data-icon="fa-map"}
+# USA Population {data-icon="fa-map"} 
 
 ```{r}
 # example plotly graph
@@ -148,7 +148,4 @@ p
 
 ```
 
-Page 3
-=======
-
-First level section headers will be displayed as separate pages. Page titles are displayed as a navigation menu at the top of the dashboard. You can also apply icons to page titles through the data-icon attribute. You can find other available icons from https://fontawesome.com.
+# USA Population {data-icon="fa-car"} 

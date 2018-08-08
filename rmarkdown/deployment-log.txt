@@ -1,0 +1,537 @@
+----- Deployment log started at  2018-08-06 21:16:02  -----
+Deploy command: 
+ rsconnect::deployApp(appDir = "~/tufts-r-workshop/rmarkdown",      appFileManifest = "/tmp/9541-e2ff-7722-34f4", appPrimaryDoc = "RMD_example.Rmd",      appSourceDoc = "~/tufts-r-workshop/rmarkdown/RMD_example.Rmd",      account = "hadrien", server = "colorado.rstudio.com", appName = "rmd_syntax__options",      appId = 1328, launch.browser = function(url) {         message("Deployment completed: ", url)     }, lint = FALSE, metadata = list(asMultiple = FALSE, asStatic = FALSE),      logLevel = "verbose") 
+
+Session information: 
+R version 3.4.4 (2018-03-15)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 14.04.5 LTS
+
+Matrix products: default
+BLAS: /usr/lib/openblas-base/libopenblas.so.0
+LAPACK: /usr/lib/lapack/liblapack.so.3.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_3.4.4  rsconnect_0.8.5
+Cookies: 
+[1] "None"
+GET /rsc/__api__/applications/1328 45ms
+----- Bundle upload started at  2018-08-06 21:16:02  -----
+[2018-08-06 21:16:02] Inferring App mode and parameters 
+[2018-08-06 21:16:02] Bundling app dir 
+[2018-08-06 21:16:02] Generate manifest.json 
+[2018-08-06 21:16:07] Writing Rmd index if necessary 
+[2018-08-06 21:16:07] Compressing the bundle 
+POST /rsc/__api__/applications/1328/upload 42ms
+[2018-08-06 21:16:07] Saving deployment record for rmd_syntax__options - hadrien 
+----- Server deployment started at  2018-08-06 21:16:07  -----
+POST /rsc/__api__/applications/1328/deploy 28ms
+<< {
+	"bundle" : 13719
+}
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=0 29ms
+Building R Markdown document...
+Bundle requested R version 3.4.4; using /opt/R/3.4.4/bin/R which has version 3.4.4
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=2 16ms
+2018/08/06 21:16:08.502809661 # Validating R library read / write permissions --------------------------------
+2018/08/06 21:16:08.528832936 # Validating packrat installation ----------------------------------------------
+2018/08/06 21:16:08.528942999 Installed packrat SHA is: a0b92cac860c2751e27f5432f49496e1241e04c5
+2018/08/06 21:16:08.529065521 Packaged packrat SHA is:  a0b92cac860c2751e27f5432f49496e1241e04c5
+2018/08/06 21:16:08.531014842 Packrat is up-to-date.
+2018/08/06 21:16:08.531194401 R version: 3.4.4
+2018/08/06 21:16:08.531210915 packrat version: 0.4.9.2
+2018/08/06 21:16:08.532002820 # Validating packrat cache read / write permissions ----------------------------
+2018/08/06 21:16:08.675483511 Audited package hashes with local packrat installation.
+2018/08/06 21:16:08.681470407 # Installing required R packages with `packrat::restore()` ---------------------
+2018/08/06 21:16:08.894384731 Installing BH (1.62.0-1) ... 
+2018/08/06 21:16:08.906481342 Using cached BH.
+2018/08/06 21:16:08.906697784 	OK (symlinked cache)
+2018/08/06 21:16:08.906849873 Installing MASS (7.3-50) ... 
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=16 17ms
+2018/08/06 21:16:09.040658645 Using cached MASS.
+2018/08/06 21:16:09.040840534 	OK (symlinked cache)
+2018/08/06 21:16:09.041019943 Installing R6 (2.2.2) ... 
+2018/08/06 21:16:09.052467792 Using cached R6.
+2018/08/06 21:16:09.052661437 	OK (symlinked cache)
+2018/08/06 21:16:09.052802853 Installing RColorBrewer (1.1-2) ... 
+2018/08/06 21:16:09.063281251 Using cached RColorBrewer.
+2018/08/06 21:16:09.063481878 	OK (symlinked cache)
+2018/08/06 21:16:09.063622504 Installing Rcpp (0.12.18) ... 
+2018/08/06 21:16:09.076121076 Using cached Rcpp.
+2018/08/06 21:16:09.076320243 	OK (symlinked cache)
+2018/08/06 21:16:09.076461318 Installing assertthat (0.2.0) ... 
+2018/08/06 21:16:09.087042983 Using cached assertthat.
+2018/08/06 21:16:09.087243090 	OK (symlinked cache)
+2018/08/06 21:16:09.087385357 Installing backports (1.1.1) ... 
+2018/08/06 21:16:09.098859835 Using cached backports.
+2018/08/06 21:16:09.099044734 	OK (symlinked cache)
+2018/08/06 21:16:09.099216407 Installing base64enc (0.1-3) ... 
+2018/08/06 21:16:09.109230751 Using cached base64enc.
+2018/08/06 21:16:09.109434710 	OK (symlinked cache)
+2018/08/06 21:16:09.109600058 Installing bindr (0.1.1) ... 
+2018/08/06 21:16:09.122267493 Using cached bindr.
+2018/08/06 21:16:09.122466805 	OK (symlinked cache)
+2018/08/06 21:16:09.122619457 Installing colorspace (1.2-6) ... 
+2018/08/06 21:16:09.133901151 Using cached colorspace.
+2018/08/06 21:16:09.134093663 	OK (symlinked cache)
+2018/08/06 21:16:09.134265771 Installing corrplot (0.84) ... 
+2018/08/06 21:16:09.146209855 Using cached corrplot.
+2018/08/06 21:16:09.146410333 	OK (symlinked cache)
+2018/08/06 21:16:09.146554722 Installing crayon (1.3.4) ... 
+2018/08/06 21:16:09.158897294 Using cached crayon.
+2018/08/06 21:16:09.159089570 	OK (symlinked cache)
+2018/08/06 21:16:09.159242422 Installing dichromat (2.0-0) ... 
+2018/08/06 21:16:09.169292444 Using cached dichromat.
+2018/08/06 21:16:09.169484155 	OK (symlinked cache)
+2018/08/06 21:16:09.169641200 Installing digest (0.6.10) ... 
+2018/08/06 21:16:09.181834280 Using cached digest.
+2018/08/06 21:16:09.182033645 	OK (symlinked cache)
+2018/08/06 21:16:09.182187987 Installing glue (1.2.0) ... 
+2018/08/06 21:16:09.194785681 Using cached glue.
+2018/08/06 21:16:09.194982261 	OK (symlinked cache)
+2018/08/06 21:16:09.195131083 Installing gtable (0.2.0) ... 
+2018/08/06 21:16:09.205827802 Using cached gtable.
+2018/08/06 21:16:09.206021491 	OK (symlinked cache)
+2018/08/06 21:16:09.206173440 Installing highr (0.6) ... 
+2018/08/06 21:16:09.217991477 Using cached highr.
+2018/08/06 21:16:09.218188760 	OK (symlinked cache)
+2018/08/06 21:16:09.218346194 Installing jsonlite (1.5) ... 
+2018/08/06 21:16:09.258504334 Using cached jsonlite.
+2018/08/06 21:16:09.258853082 	OK (symlinked cache)
+2018/08/06 21:16:09.259045230 Installing labeling (0.3) ... 
+2018/08/06 21:16:09.270466354 Using cached labeling.
+2018/08/06 21:16:09.270666091 	OK (symlinked cache)
+2018/08/06 21:16:09.270837447 Installing lattice (0.20-35) ... 
+2018/08/06 21:16:09.283339467 Using cached lattice.
+2018/08/06 21:16:09.283544179 	OK (symlinked cache)
+2018/08/06 21:16:09.283708281 Installing lazyeval (0.2.0) ... 
+2018/08/06 21:16:09.294728687 Using cached lazyeval.
+2018/08/06 21:16:09.294922815 	OK (symlinked cache)
+2018/08/06 21:16:09.295096462 Installing magrittr (1.5) ... 
+2018/08/06 21:16:09.305605669 Using cached magrittr.
+2018/08/06 21:16:09.305798011 	OK (symlinked cache)
+2018/08/06 21:16:09.305952114 Installing mime (0.5) ... 
+2018/08/06 21:16:09.318941819 Using cached mime.
+2018/08/06 21:16:09.319167111 	OK (symlinked cache)
+2018/08/06 21:16:09.319363663 Installing packrat (0.4.9-3) ... 
+2018/08/06 21:16:09.333914821 Using cached packrat.
+2018/08/06 21:16:09.334187166 	OK (symlinked cache)
+2018/08/06 21:16:09.334323159 Installing pkgconfig (2.0.1) ... 
+2018/08/06 21:16:09.346925102 Using cached pkgconfig.
+2018/08/06 21:16:09.347148691 	OK (symlinked cache)
+2018/08/06 21:16:09.347347646 Installing plogr (0.2.0) ... 
+2018/08/06 21:16:09.360794851 Using cached plogr.
+2018/08/06 21:16:09.361157994 	OK (symlinked cache)
+2018/08/06 21:16:09.361464179 Installing rlang (0.2.1) ... 
+2018/08/06 21:16:09.374840038 Using cached rlang.
+2018/08/06 21:16:09.375061096 	OK (symlinked cache)
+2018/08/06 21:16:09.375247269 Installing stringi (1.2.4) ... 
+2018/08/06 21:16:09.389610201 Using cached stringi.
+2018/08/06 21:16:09.389817016 	OK (symlinked cache)
+2018/08/06 21:16:09.389998053 Installing tinytex (0.6) ... 
+2018/08/06 21:16:09.402240574 Using cached tinytex.
+2018/08/06 21:16:09.402454787 	OK (symlinked cache)
+2018/08/06 21:16:09.402611565 Installing utf8 (1.1.4) ... 
+2018/08/06 21:16:09.414601218 Using cached utf8.
+2018/08/06 21:16:09.414793467 	OK (symlinked cache)
+2018/08/06 21:16:09.414972091 Installing viridisLite (0.3.0) ... 
+2018/08/06 21:16:09.428493160 Using cached viridisLite.
+2018/08/06 21:16:09.428713542 	OK (symlinked cache)
+2018/08/06 21:16:09.428881591 Installing withr (2.0.0) ... 
+2018/08/06 21:16:09.442148524 Using cached withr.
+2018/08/06 21:16:09.442355293 	OK (symlinked cache)
+2018/08/06 21:16:09.442526343 Installing yaml (2.1.14) ... 
+2018/08/06 21:16:09.452527226 Using cached yaml.
+2018/08/06 21:16:09.452735352 	OK (symlinked cache)
+2018/08/06 21:16:09.452917822 Installing plyr (1.8.4) ... 
+2018/08/06 21:16:09.469102421 Using cached plyr.
+2018/08/06 21:16:09.469310126 	OK (symlinked cache)
+2018/08/06 21:16:09.469470378 Installing rprojroot (1.2) ... 
+2018/08/06 21:16:09.482734050 Using cached rprojroot.
+2018/08/06 21:16:09.482943950 	OK (symlinked cache)
+2018/08/06 21:16:09.483099213 Installing munsell (0.4.3) ... 
+2018/08/06 21:16:09.494965686 Using cached munsell.
+2018/08/06 21:16:09.495178973 	OK (symlinked cache)
+2018/08/06 21:16:09.495328473 Installing cli (1.0.0) ... 
+2018/08/06 21:16:09.507617096 Using cached cli.
+2018/08/06 21:16:09.507846944 	OK (symlinked cache)
+2018/08/06 21:16:09.508023598 Installing htmltools (0.3.6) ... 
+2018/08/06 21:16:09.523554620 Using cached htmltools.
+2018/08/06 21:16:09.523761618 	OK (symlinked cache)
+2018/08/06 21:16:09.523928603 Installing Matrix (1.2-14) ... 
+2018/08/06 21:16:09.539219880 Using cached Matrix.
+2018/08/06 21:16:09.539416342 	OK (symlinked cache)
+2018/08/06 21:16:09.539586427 Installing nlme (3.1-137) ... 
+2018/08/06 21:16:09.552891932 Using cached nlme.
+2018/08/06 21:16:09.553081995 	OK (symlinked cache)
+2018/08/06 21:16:09.553239736 Installing markdown (0.8) ... 
+2018/08/06 21:16:09.566954015 Using cached markdown.
+2018/08/06 21:16:09.567171213 	OK (symlinked cache)
+2018/08/06 21:16:09.567323740 Installing bindrcpp (0.2.2) ... 
+2018/08/06 21:16:09.586202405 Using cached bindrcpp.
+2018/08/06 21:16:09.586400740 	OK (symlinked cache)
+2018/08/06 21:16:09.586582502 Installing stringr (1.3.1) ... 
+2018/08/06 21:16:09.599181562 Using cached stringr.
+2018/08/06 21:16:09.599396025 	OK (symlinked cache)
+2018/08/06 21:16:09.599549436 Installing scales (0.5.0) ... 
+2018/08/06 21:16:09.616444204 Using cached scales.
+2018/08/06 21:16:09.616700218 	OK (symlinked cache)
+2018/08/06 21:16:09.616804795 Installing pillar (1.3.0) ... 
+2018/08/06 21:16:09.629396758 Using cached pillar.
+2018/08/06 21:16:09.629603159 	OK (symlinked cache)
+2018/08/06 21:16:09.629776777 Installing mgcv (1.8-15) ... 
+2018/08/06 21:16:09.640860135 Using cached mgcv.
+2018/08/06 21:16:09.641065979 	OK (symlinked cache)
+2018/08/06 21:16:09.641220534 Installing evaluate (0.10.1) ... 
+2018/08/06 21:16:09.653776566 Using cached evaluate.
+2018/08/06 21:16:09.653966574 	OK (symlinked cache)
+2018/08/06 21:16:09.654134175 Installing reshape2 (1.4.1) ... 
+2018/08/06 21:16:09.668568044 Using cached reshape2.
+2018/08/06 21:16:09.668755427 	OK (symlinked cache)
+2018/08/06 21:16:09.668933182 Installing tibble (1.4.2) ... 
+2018/08/06 21:16:09.682399707 Using cached tibble.
+2018/08/06 21:16:09.682597617 	OK (symlinked cache)
+2018/08/06 21:16:09.682754935 Installing knitr (1.20) ... 
+2018/08/06 21:16:09.705848506 Using cached knitr.
+2018/08/06 21:16:09.706041405 	OK (symlinked cache)
+2018/08/06 21:16:09.706211375 Installing ggplot2 (3.0.0) ... 
+2018/08/06 21:16:09.724214161 Using cached ggplot2.
+2018/08/06 21:16:09.724427845 	OK (symlinked cache)
+2018/08/06 21:16:09.724578992 Installing purrr (0.2.5) ... 
+2018/08/06 21:16:09.738193173 Using cached purrr.
+2018/08/06 21:16:09.738391542 	OK (symlinked cache)
+2018/08/06 21:16:09.738543062 Installing rmarkdown (1.10) ... 
+2018/08/06 21:16:09.755794698 Using cached rmarkdown.
+2018/08/06 21:16:09.756005700 	OK (symlinked cache)
+2018/08/06 21:16:09.756163277 Installing tidyselect (0.2.4) ... 
+2018/08/06 21:16:09.771899235 Using cached tidyselect.
+2018/08/06 21:16:09.772117156 	OK (symlinked cache)
+2018/08/06 21:16:09.772267880 Installing dplyr (0.7.6) ... 
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 19ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 12ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 32ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 40ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 35ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 34ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 19ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 19ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 19ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 19ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 40ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 19ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 218ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 21ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 12ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 24ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 13ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 25ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 20ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 14ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 17ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 16ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 18ms
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=175 15ms
+2018/08/06 21:19:49.613698380 Using cached dplyr.
+2018/08/06 21:19:49.622803581 	OK (built source)
+Completed packrat build against R version: '3.4.4'
+Launching R Markdown document...
+2018/08/06 21:19:49.982119189 Using Packrat dir /opt/rstudio-connect/mnt/app/packrat/lib/x86_64-pc-linux-gnu/3.4.4
+2018/08/06 21:19:49.985622802 LANG: en_US.UTF-8
+2018/08/06 21:19:49.985635236 R version: 3.4.4
+2018/08/06 21:19:49.985672018 rmarkdown version: 1.10
+2018/08/06 21:19:49.985674526 knitr version: 1.20
+2018/08/06 21:19:49.985832380 Using pandoc at /opt/rstudio-connect/ext/pandoc2
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=185 16ms
+2018/08/06 21:19:51.176492597 
+2018/08/06 21:19:51.176514525 
+2018/08/06 21:19:51.176569326 processing file: RMD_example.Rmd
+  |....                                                             |   6%
+2018/08/06 21:19:51.247428684   ordinary text without R code
+2018/08/06 21:19:51.247454114 
+  |.......                                                          |  11%
+2018/08/06 21:19:51.249031433 label: unnamed-chunk-1 (with options) 
+2018/08/06 21:19:51.251211915 List of 1
+2018/08/06 21:19:51.252652550  $ include: logi FALSE
+2018/08/06 21:19:51.252700657 
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=196 15ms
+  |...........                                                      |  17%
+2018/08/06 21:19:51.828939109   ordinary text without R code
+2018/08/06 21:19:51.828949297 
+  |..............                                                   |  22%
+2018/08/06 21:19:51.959135394 label: unnamed-chunk-2 (with options) 
+2018/08/06 21:19:51.959410034 List of 1
+2018/08/06 21:19:51.960099288  $ echo: logi FALSE
+2018/08/06 21:19:51.960122593 
+  |..................                                               |  28%
+2018/08/06 21:19:52.415454057   ordinary text without R code
+2018/08/06 21:19:52.415465534 
+  |......................                                           |  33%
+2018/08/06 21:19:52.416777726 label: block-name (with options) 
+2018/08/06 21:19:52.417119344 List of 1
+2018/08/06 21:19:52.417985153  $ include: logi FALSE
+2018/08/06 21:19:52.418025056 
+  |.........................                                        |  39%
+2018/08/06 21:19:52.449927681   ordinary text without R code
+2018/08/06 21:19:52.449936071 
+  |.............................                                    |  44%
+2018/08/06 21:19:52.450968830 label: unnamed-chunk-3 (with options) 
+2018/08/06 21:19:52.451213380 List of 1
+2018/08/06 21:19:52.451932774  $ echo: logi FALSE
+2018/08/06 21:19:52.451972955 
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=220 14ms
+  |................................                                 |  50%
+2018/08/06 21:19:52.881179135   ordinary text without R code
+2018/08/06 21:19:52.881210663 
+  |....................................                             |  56%
+2018/08/06 21:19:52.882499265 label: unnamed-chunk-4 (with options) 
+2018/08/06 21:19:52.882846896 List of 2
+2018/08/06 21:19:52.883740132  $ message: logi FALSE
+2018/08/06 21:19:52.884414031  $ warning: logi FALSE
+2018/08/06 21:19:52.884446103 
+  |........................................                         |  61%
+2018/08/06 21:19:52.893462895   ordinary text without R code
+2018/08/06 21:19:52.893472761 
+  |...........................................                      |  67%
+2018/08/06 21:19:52.894505862 label: unnamed-chunk-5 (with options) 
+2018/08/06 21:19:52.894732412 List of 1
+2018/08/06 21:19:52.895430257  $ eval: logi FALSE
+2018/08/06 21:19:52.895469820 
+  |...............................................                  |  72%
+2018/08/06 21:19:52.897390388   ordinary text without R code
+2018/08/06 21:19:52.897401931 
+  |...................................................              |  78%
+2018/08/06 21:19:52.898474667 label: e-mail
+  |......................................................           |  83%
+2018/08/06 21:19:52.914277062   ordinary text without R code
+2018/08/06 21:19:52.914291216 
+  |..........................................................       |  89%
+2018/08/06 21:19:52.915423902 label: output-files
+  |.............................................................    |  94%
+2018/08/06 21:19:52.979000401   ordinary text without R code
+2018/08/06 21:19:52.979018202 
+  |.................................................................| 100%
+2018/08/06 21:19:52.980113556 label: email-body
+2018/08/06 21:19:52.996861733 
+2018/08/06 21:19:53.015256637 output file: /opt/rstudio-connect/mnt/tmp/RtmpHnv3sb/RMD_example.knit.md
+2018/08/06 21:19:53.015272307 
+2018/08/06 21:19:53.045431572 /opt/rstudio-connect/ext/pandoc2/pandoc +RTS -K512m -RTS /opt/rstudio-connect/mnt/tmp/RtmpHnv3sb/RMD_example.utf8.md --to latex --from markdown+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash --output /opt/rstudio-connect/mnt/report/RMD_example.tex --template /opt/rstudio-connect/mnt/packrat/3.4.4/v2/library/rmarkdown/02f1aac33000c63986c6b5585e36e7ae/rmarkdown/rmd/latex/default-1.17.0.2.tex --highlight-style tango --pdf-engine pdflatex --variable graphics=yes --variable 'geometry:margin=1in' --variable 'compact-title:yes' 
+GET /rsc/__api__/tasks/DORcrUscmPbdY4iR?first_status=256 14ms
+2018/08/06 21:19:53.991709189 
+2018/08/06 21:19:53.991727620 Output created: /opt/rstudio-connect/mnt/report/RMD_example.pdf
+2018/08/06 21:19:54.012217378 Copying output file 'data1.csv' to '/opt/rstudio-connect/mnt/report'...
+2018/08/06 21:19:54.012443359 Copying output file 'data2.csv' to '/opt/rstudio-connect/mnt/report'...
+2018/08/06 21:19:54.013397424 Warning messages:
+2018/08/06 21:19:54.013500848 1: In file.rename(from, to) :
+2018/08/06 21:19:54.013511711   cannot rename file '/opt/rstudio-connect/mnt/report/RMD_example_files/figure-latex' to '/opt/rstudio-connect/mnt/tmp/RtmpHnv3sb//opt/rstudio-connect/mnt/report/RMD_example_files/figure-latex', reason 'No such file or directory'
+2018/08/06 21:19:54.013622152 2: In file.rename(from, to) :
+2018/08/06 21:19:54.013629971   cannot rename file '/opt/rstudio-connect/mnt/tmp/RtmpHnv3sb//opt/rstudio-connect/mnt/report/RMD_example_files/figure-latex' to '/opt/rstudio-connect/mnt/report/RMD_example_files/figure-latex', reason 'No such file or directory'
+GET /rsc/__api__/applications/1328/config 14ms
+----- Deployment log finished at  2018-08-06 21:19:54  -----
+Deployment completed: http://colorado.rstudio.com:80/rsc/connect/#/apps/1328
+There were 50 or more warnings (use warnings() to see the first 50)

@@ -1,0 +1,12 @@
+name: world_capitals
+title: World Capitals
+username: hadrien
+account: hadrien
+server: colorado.rstudio.com
+hostUrl: http://colorado.rstudio.com/rsc/__api__
+appId: 1329
+bundleId: 13699
+url: http://colorado.rstudio.com:80/rsc/content/1329/
+when: 1533575822.58178
+asMultiple: FALSE
+asStatic: FALSE

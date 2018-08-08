@@ -1,0 +1,27 @@
+---
+title: "valueBox"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns # default layout
+    vertical_layout: fill
+    runtime: shiny
+---
+
+
+```{r, setup, include=FALSE}
+library(shinydashboard)
+library(flexdashboard)
+library(shiny)
+```
+
+### Row 1
+```{r, valueBox1}
+
+valueBox(1, color = "aqua")
+```
+
+### Row 2
+```{r, valueBox2}
+
+# valueBox(1, subtitle = "test-2", color = "aqua", icon = "fa-pencil")
+```
