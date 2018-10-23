@@ -2,9 +2,9 @@
 title: "R Markdown Example"
 author: "Hadrien"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
@@ -34,6 +34,7 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 "Markdown is a lightweight markup language with plain text formatting syntax. It is **designed so that it can be converted to HTML and many other formats** using a tool by the same name.[8] Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. As the initial description of Markdown contained ambiguities and unanswered questions, many implementations and extensions of Markdown appeared over the years to answer these issues.... the goal of enabling people "to write using an easy-to-read, easy-to-write plain text format, and optionally convert it to structurally valid XHTML (or HTML)... The key design goal is **readability**..." [wikipedia](https://en.wikipedia.org/wiki/Markdown)
 
 ## R Markdown Basics  
+
 > RMD files contain 3 important types of content:  
 1. An (optional) YAML header surrounded by --s.  
 2. Chunks of code surrounded by ```.  
@@ -57,11 +58,10 @@ superscript^2^
 #### ect  
 
 inline equation: $A = \pi*r^{2}$  
+
+
 image: ![Image Alt Text](tufts.jpeg)  
 
-Video  
-
-<iframe width="560" height="315" src="https://youtu.be/atiYXm7JZv0" frameborder="0" allowfullscreen></iframe> 
 
 > block quote  
 Insert deep quote here
@@ -91,6 +91,10 @@ Use RMarkdown for all your R project for readibility and reproducibility. A lot 
 
 ## Code chunk options
 
+```{r}
+
+```
+
 
 ```{r, block-name, include=FALSE}
 # include option suppresses the printing of both the code and the results
@@ -115,6 +119,7 @@ library(ggplot2)
 # whether to evaluate the code chunk or not
 corrplot(M, method="circle")
 ```
+
 ## E-mail options
 
 ```{r e-mail}

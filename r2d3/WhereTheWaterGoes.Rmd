@@ -1,0 +1,27 @@
+---
+title: "Where The Water Goes"
+output: html_notebook
+---
+
+
+```{r, include=FALSE}
+library(networkD3)
+library(tibble)
+
+
+```
+
+```{r}
+networkData <- tribble(~source, ~target,
+                       "Colorado River", "Tributaries",
+                       "Tributaries", "5 Major Tributaries",
+                       "5 Major Tributaries", "Green River",
+                      "5 Major Tributaries", "Gila River",
+                      "5 Major Tributaries", "San Juan River")
+
+
+
+# Plot
+simpleNetwork(networkData)
+
+```

@@ -1,0 +1,60 @@
+---
+title: "Temp"
+author: "hadrien"
+date: "10/11/2018"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+```
+
+# Page 1
+
+Column {.sidebar}
+--------
+
+## Column 1 {.tabset}
+
+### Row 1
+```{r, echo = FALSE}
+print("Add some text")
+```
+
+### Row 2
+
+## Column 2 {data-width=300} 
+
+### Row 1
+
+```{r, echo = FALSE}
+ggplotly(ggplot(mtcars, aes(hp,mpg)) + geom_point())
+```
+
+### Row 2
+
+# Page 2 {data-orientation=rows}
+
+
+## Row 1
+
+### Column 1
+
+
+### Column 2
+
+
+## Row 2
+
+```{r}
+
+```
+
+### Column 1

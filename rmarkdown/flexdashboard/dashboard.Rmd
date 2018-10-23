@@ -2,23 +2,20 @@
 title: "Flexdashboard"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns # default layout
+    orientation: columns
     vertical_layout: fill
 ---
-
-# Page 1
-
-
-# Page 2
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(readr)
 
-
 ```
 
-Column {data-width=650, .tabset}
+
+# Page 1 
+
+Column {data-width=650}
 -----------------------------------------------------------------------
 
 ### Chart A
@@ -27,7 +24,9 @@ Column {data-width=650, .tabset}
 
 ```
 
+
 ### Chart B
+
 Column {data-width=350}
 -----------------------------------------------------------------------
 
@@ -44,6 +43,7 @@ Column {data-width=350}
 ```
 
 
+# Page 2 {data-navmenu=Details}
 
-# Page 2
+# Page 3 {data-navmenu=Details}
 

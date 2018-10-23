@@ -1,8 +1,11 @@
 ---
 title: "Visualization in R"
+author: "Hadrien Dykiel"
 output:
   html_document:
     df_print: paged
+  pdf_document: default
+  word_document: default
 ---
 
 ## My favorite data viz packages  
@@ -17,7 +20,7 @@ output:
 
 Let's start by playing around with `ggplot2`. These examples were borrowed from Hadley's and Garrett's book [R for Data Science]("http://r4ds.had.co.nz/")
 
-```{r}
+```{r, echo = FALSE, message= FALSE, warning=FALSE}
 library(tidyverse) # load tidyverse packacges which includes ggplot2
 head(mpg, 10) # print first 6 rows
 
@@ -27,9 +30,7 @@ ggplot(data = mpg) + # specifies dataframe used for visualization
 
 ```
 
-```{r}
 
-```
 
 
 A useful graphing template to remember:   

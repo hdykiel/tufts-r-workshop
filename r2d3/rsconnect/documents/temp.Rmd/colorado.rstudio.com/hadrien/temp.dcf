@@ -1,0 +1,12 @@
+name: temp
+title: temp
+username: hadrien
+account: hadrien
+server: colorado.rstudio.com
+hostUrl: http://colorado.rstudio.com/rsc/__api__
+appId: 1554
+bundleId: 18944
+url: http://colorado.rstudio.com:80/rsc/content/1554/
+when: 1539184605.40173
+asMultiple: FALSE
+asStatic: FALSE

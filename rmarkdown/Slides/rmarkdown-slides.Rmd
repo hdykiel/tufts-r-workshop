@@ -7,6 +7,15 @@ output:
   ioslides_presentation: default
 ---
 
+# Housekeeping 
+
+Install some packages we'll be using today: 
+```{r, eval=FALSE}
+install.packages("rmarkdown")
+install.packages("flexdashboard")
+install.packages("leaflet") # optional
+
+```
 
 # Goals for today
 
